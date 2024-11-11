@@ -1,15 +1,40 @@
-Source: template-repository
-Section: unknown
+Source: golang-github-openshift-api
+Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
+Uploaders:
+ Dmitry Smirnov <onlyjob@debian.org>,
+Section: devel
+Testsuite: autopkgtest-pkg-go
 Priority: optional
-Maintainer: Tsic404 <liuheng@deepin.org>
-Build-Depends: debhelper (>= 11)
-Standards-Version: 4.1.3
-Homepage: https://github.com/deepin-community/template-repository
-#Vcs-Browser: https://salsa.debian.org/debian/deepin-community-template-repository
-#Vcs-Git: https://salsa.debian.org/debian/deepin-community-template-repository.git
+Build-Depends:
+ debhelper-compat (= 12),
+ dh-golang,
+Build-Depends-Indep: golang-any
+    ,golang-github-emicklei-go-restful-dev
+    ,golang-github-google-gofuzz-dev
+    ,golang-github-json-iterator-go-dev
+    ,golang-github-spf13-pflag-dev
+    ,golang-glog-dev
+    ,golang-gogoprotobuf-dev
+    ,golang-golang-x-net-dev
+    ,golang-gopkg-inf.v0-dev
+    ,golang-gopkg-yaml.v2-dev
+Standards-Version: 4.4.1
+Vcs-Browser: https://salsa.debian.org/go-team/packages/golang-github-openshift-api
+Vcs-Git: https://salsa.debian.org/go-team/packages/golang-github-openshift-api.git
+Homepage: https://github.com/openshift/api
+Rules-Requires-Root: no
+XS-Go-Import-Path: github.com/openshift/api
 
-Package: template-repository
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Package: golang-github-openshift-api-dev
+Architecture: all
+Depends: ${misc:Depends}
+    ,golang-github-emicklei-go-restful-dev
+    ,golang-github-google-gofuzz-dev
+    ,golang-github-json-iterator-go-dev
+    ,golang-github-spf13-pflag-dev
+    ,golang-glog-dev
+    ,golang-gogoprotobuf-dev
+    ,golang-golang-x-net-dev
+    ,golang-gopkg-inf.v0-dev
+Description: OpenShift API definitions
+ API type definitions and serialization code used by "openshift/client-go".
