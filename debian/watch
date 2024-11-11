@@ -1,0 +1,10 @@
+# https://salsa.debian.org/snippets/96
+# uscan(1) configuration file.
+version=4
+
+opts="\
+pgpmode=none,\
+mode=git,gitmode=shallow,date=%Y%m%d,pretty=4.0+git%cd.%h,\
+repack,compression=xz,\
+" https://github.com/openshift/api.git \
+  heads/release-4.0

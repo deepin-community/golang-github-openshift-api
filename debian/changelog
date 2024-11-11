@@ -1,5 +1,25 @@
-template-repository (1.0-1) unstable; urgency=medium
+golang-github-openshift-api (4.0+git20190508.81d064c-4) unstable; urgency=medium
 
-  * Initial release
+  * Team upload
+  * Fix FTBFS by adding build depends on golang-gopkg-yaml.v2-dev
+    Thanks to Lucas Nussbaum for reporting (Closes: #963346).
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Reinhard Tartler <siretart@tauware.de>  Mon, 06 Jul 2020 06:30:46 -0400
+
+golang-github-openshift-api (4.0+git20190508.81d064c-3) unstable; urgency=medium
+
+  * Removed unused "golang-github-go-openapi-spec-dev" from (Build-)Depends.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Mon, 13 Jan 2020 14:05:14 +1100
+
+golang-github-openshift-api (4.0+git20190508.81d064c-2) unstable; urgency=medium
+
+  * Standards-Version: 4.4.1
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Fri, 03 Jan 2020 09:55:18 +1100
+
+golang-github-openshift-api (4.0+git20190508.81d064c-1) unstable; urgency=medium
+
+  * Initial release (Closes: #946799).
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Mon, 16 Dec 2019 11:20:19 +1100
